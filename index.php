@@ -1,9 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maxim
- * Date: 15.06.16
- * Time: 21:12
- */
+// model.php
+require_once 'model.php';
 
-echo '123';
+$_posts = get_all_posts
+
+require 'templates/list.php';
+?>
+
