@@ -1,29 +1,30 @@
 <?php
+
 // model.php
 function open_database_connection()
 {
-$link = new PDO("mysql:host=localhost;dbname=blog_db", 'root', '9112oleg');
+    $link = new PDO("mysql:host=localhost;dbname=blog_db", 'root', '9112oleg');
 
-return $link;
+    return $link;
 }
-?>
-<?php function close_database_connection(&$link)
+
+function close_database_connection(&$link)
 {
-$link = null;
+    $link = null;
 }
-{
+
 function get_all_posts()
-    {}
-?>
-<?php $link = open_database_connection();
+{
+    $link = open_database_connection();
 
-$result = $link->query('id1, tittle FROM post1');
+    $result = $link->query('SELECT id, tittle FROM post');
 
-$posts = array();
-while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-$posts[] = $row;
+    $posts = array();
+
+    while ($row = $result->fetch(\PDO::FETCH_ASSOC)) {
+        $posts[] = $row;
+    }
+    close_database_connection($link);
+
+    return $posts;
 }
-close_database_connection($link);
-
-return $posts;}
-?>
