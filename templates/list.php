@@ -9,7 +9,7 @@
             <?php foreach ($posts as $post): ?>
     <li>
         <a href="/show.php?id=<?php echo $post['id'] ?>">
-            <?php echo $post['tittle'] ?>
+            <?php echo $post['title'] ?>
         </a>
     </li>
 <?php endforeach ?>

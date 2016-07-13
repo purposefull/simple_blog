@@ -17,7 +17,7 @@ function get_all_posts()
 {
     $link = open_database_connection();
 
-    $result = $link->query('SELECT id, tittle FROM post');
+    $result = $link->query('SELECT id, title FROM post');
 
     $posts = array();
 
@@ -33,8 +33,7 @@ function get_post_by_id($id)
 {
     $link = open_database_connection();
 
-    $query = 'SELECT created_at, tittle, body FROM post WHERE  id=:id';
-    var_dump($query);
+    $query = 'SELECT title, id  FROM post WHERE  id=:id';
     $statement = $link->prepare($query);
     $statement->bindValue(':id', $id, PDO::PARAM_INT);
     $statement->execute();
