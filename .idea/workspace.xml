@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5e7075-71e9-4bcf-a0ac-467d69efd464" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/create.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.php" afterPath="$PROJECT_DIR$/templates/layout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create.php" afterPath="$PROJECT_DIR$/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model.php" afterPath="$PROJECT_DIR$/model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/show.php" afterPath="$PROJECT_DIR$/templates/show.php" />
     </list>
     <ignored path="simple_blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,14 +26,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/show.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
               <folding>
-                <marker date="1468584472562" expanded="true" signature="376:454" ph="INSERT INTO post... " />
+                <marker date="1468586802670" expanded="true" signature="390:468" ph="INSERT INTO post... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/show.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,21 +71,21 @@
       <file leaf-file-name="model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+            <state relative-caret-position="45">
+              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="33" />
               <folding>
-                <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-                <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
+                <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+                <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layout.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,13 +105,13 @@
         <option value="$PROJECT_DIR$/teamplates/list.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/model.php" />
-        <option value="$PROJECT_DIR$/templates/show.php" />
         <option value="$PROJECT_DIR$/show.php" />
         <option value="$PROJECT_DIR$/templates/list.php" />
         <option value="$PROJECT_DIR$/templates/layout.php" />
         <option value="$PROJECT_DIR$/new.php" />
+        <option value="$PROJECT_DIR$/model.php" />
         <option value="$PROJECT_DIR$/create.php" />
+        <option value="$PROJECT_DIR$/templates/show.php" />
       </list>
     </option>
   </component>
@@ -95,8 +126,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="531" />
-    <option name="y" value="160" />
+    <option name="x" value="762" />
+    <option name="y" value="732" />
     <option name="width" value="918" />
     <option name="height" value="970" />
   </component>
@@ -125,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,7 +192,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,15 +295,16 @@
       <workItem from="1468426011899" duration="3474000" />
       <workItem from="1468493360571" duration="1618000" />
       <workItem from="1468563553988" duration="1725000" />
-      <workItem from="1468582063045" duration="2410000" />
+      <workItem from="1468582063045" duration="4859000" />
+      <workItem from="1468587537838" duration="1185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36861000" />
+    <option name="totallyTimeSpent" value="40495000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="531" y="160" width="918" height="970" extended-state="0" />
+    <frame x="762" y="732" width="918" height="970" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30501089" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -317,8 +349,8 @@
         <state relative-caret-position="240">
           <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding>
-            <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-            <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
+            <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+            <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
           </folding>
         </state>
       </provider>
@@ -349,8 +381,8 @@
         <state relative-caret-position="60">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
-            <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-            <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
+            <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+            <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
           </folding>
         </state>
       </provider>
@@ -381,8 +413,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-            <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
+            <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+            <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
           </folding>
         </state>
       </provider>
@@ -406,8 +438,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
           <folding>
-            <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-            <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
+            <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+            <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
           </folding>
         </state>
       </provider>
@@ -431,8 +463,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
           <folding>
-            <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-            <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
+            <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+            <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
           </folding>
         </state>
       </provider>
@@ -456,8 +488,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-            <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
+            <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+            <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
           </folding>
         </state>
       </provider>
@@ -564,18 +596,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/new.php" />
     <entry file="file://$PROJECT_DIR$/templates/list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -588,11 +621,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <marker date="1468585673472" expanded="true" signature="322:348" ph="SELECT id, t... post" />
+            <marker date="1468585673472" expanded="true" signature="609:650" ph="SELECT creat... post" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <marker date="1468586802670" expanded="true" signature="390:468" ph="INSERT INTO post... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -606,46 +668,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/show.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding>
-            <marker date="1468428504621" expanded="true" signature="322:348" ph="SELECT id, t... post" />
-            <marker date="1468428504621" expanded="true" signature="609:650" ph="SELECT creat... post" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1468584472562" expanded="true" signature="376:454" ph="INSERT INTO post... " />
-          </folding>
         </state>
       </provider>
     </entry>

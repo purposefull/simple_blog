@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html
 <h1>Create Post</h1>
 
 <form action="" method="post">
@@ -14,6 +12,7 @@
 require_once 'model.php';
 
 //createAction
+$link = open_database_connection();
 
 $query = 'INSERT INTO post (title, body, created_at) VALUES (:title, :body, :created_at)';
 $statement = $link->prepare($query);

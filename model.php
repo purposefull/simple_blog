@@ -43,4 +43,6 @@ function get_post_by_id($id)
     close_database_connection($link);
 
     return $row;
+
+
 }
