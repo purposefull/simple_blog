@@ -33,7 +33,7 @@ function get_post_by_id($id)
 {
     $link = open_database_connection();
 
-    $query = 'SELECT title, id  FROM post WHERE  id=:id';
+    $query = 'SELECT id, title, body, created_at  FROM post WHERE  id=:id';
     $statement = $link->prepare($query);
     $statement->bindValue(':id', $id, PDO::PARAM_INT);
     $statement->execute();

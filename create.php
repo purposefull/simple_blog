@@ -1,12 +1,3 @@
-<h1>Create Post</h1>
-
-<form action="" method="post">
-    <input type="text" placeholder="title" name="title"><br>
-    <input type="text" placeholder="body" name="body"><br>
-    <input type="text" placeholder="created_at" name="created_at"><br><br>
-    <input type="submit" name="123">
-</form>
-
 <?php
 
 require_once 'model.php';
@@ -22,4 +13,10 @@ $statement->bindValue (':created_at', $_POST ['created_at'], PDO::PARAM_STR);
 $statement->execute();
 
 $id = $link->lastInsertId();
+
+$date = date('Y-m-d H:i:s', time());
+
+//function date();
+
+require_once 'templates/create.php';
 
