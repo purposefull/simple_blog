@@ -15,6 +15,6 @@ $statement->execute();
 
 $id = $link->lastInsertId();
 
- 
+
 
 require_once 'templates/edit.php';

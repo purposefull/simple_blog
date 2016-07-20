@@ -1,4 +1,5 @@
 <?php
-$id = $_REQUEST['id'];
 
-query ("DELETE FROM `post` WHERE `id`=\"$id\"");
+$id = $_REQUEST['id']
+
+("DELETE FROM `post` WHERE `id`=\"$id\"");
