@@ -12,7 +12,10 @@
                         <?php echo $post['title'] ?>
                     </a>
                     <a href="/edit.php?id=<?php echo $post['id'] ?>">
-                       edit
+                        <?php echo $post['title'] ?>
+                    </a>
+                    <a href="/delete.php?id=<?php echo $post['id'] ?>">
+                        <?php echo $post['title'] ?>
                     </a>
                 </li>
             <?php endforeach ?>
