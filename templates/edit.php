@@ -1,7 +1,5 @@
 <h1>Edit Post</h1>
 
-<?php $post = get_post_by_id($_GET['id']);?>
-
 <form action="" method="post">
     <input type="hidden"  name="id" value="<?php echo $data['id'] ?>"><br>
     <input type="text" placeholder="title" name="title" value="<?php echo $data['title'] ?>"><br>

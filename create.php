@@ -3,7 +3,6 @@
 require_once 'model.php';
 
 
-
 if ($_POST['id']) {
 
     $link = open_database_connection();
@@ -20,9 +19,10 @@ if ($_POST['id']) {
 
     $id = $link->lastInsertId();
 
+}
 
-    $date = date('Y-m-d H:i:s', time());
+$date = date('Y-m-d H:i:s', time());
 
 
-require_once 'templates/create.php';}
+require_once 'templates/create.php';
 
