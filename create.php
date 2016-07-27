@@ -18,8 +18,10 @@ if ($_POST['id']) {
     $data = get_post_by_id($_POST['id']);
 
     $id = $link->lastInsertId();
-
+    
 }
+
+header('Location: edit.php');
 
 $date = date('Y-m-d H:i:s', time());
 
