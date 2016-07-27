@@ -1,24 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>List of Posts</title>
-    </head>
+<?php require_once 'layout.php'?>
     <body>
         <h1>List of Posts</h1>
-        <ul>
+
+       <table class='table'>
+           <thead>
+           <tr>
+               <th>#</th>
+               <th>title</th>
+               <th>edit</th>
+               <th>delete</th>
+           </tr>
+           </thead>
             <?php foreach ($posts as $post): ?>
-                <li>
+                <tr>
+                    <td>
+                            <?php echo $post['id'] ?>
+
+                    </td>
+                    <td>
                     <a href="/show.php?id=<?php echo $post['id'] ?>">
                         <?php echo $post['title'] ?>
                     </a>
-                    <a href="/edit.php?id=<?php echo $post['id'] ?>">
-                        <?php echo $post['title'] ?>
+                    </td>
+                    <td>
+                        <a href="/edit.php?id=<?php echo $post['id'] ?>">
+                        edit
                     </a>
-                    <a href="/delete.php?id=<?php echo $post['id'] ?>">
-                        <?php echo $post['title'] ?>
+                    </td>
+                    <td>
+                        <a href="/delete.php?id=<?php echo $post['id'] ?>">
+                        delete
                     </a>
-                </li>
+                    </td>
+                </tr>
             <?php endforeach ?>
-        </ul>
+        </table>
     </body>
 </html>
