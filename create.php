@@ -23,7 +23,6 @@ if ($_POST['id']) {
 
     $date = date('Y-m-d H:i:s', time());
 
-//function date();
 
-require_once 'templates/create.php';
+require_once 'templates/create.php';}
 

@@ -16,11 +16,15 @@ if ($_POST['id']) {
     $statement->bindValue (':created_at', $_POST ['created_at'], PDO::PARAM_STR);
     $statement->execute();
 
+<<<<<<< HEAD
     $data = get_post_by_id($_POST['id']);
 
 
    //$link->exec('UPDATE post SET  body = '.$_POST["body"].' WHERE id='.);
 
 }
+=======
+ 
+>>>>>>> 7d752e789a07e2c5301300b4a50deb35078d41fb
 
 require_once 'templates/edit.php';
