@@ -1,4 +1,4 @@
-<?php require_once 'layout.php'?>
+<?php require 'layout.php'?>
     <body>
         <h1>List of Posts</h1>
 
@@ -18,7 +18,7 @@
 
                     </td>
                     <td>
-                    <a href="/show.php?id=<?php echo $post['id'] ?>">
+                        <a href="/show.php?id=<?php echo $post['id'] ?>">
                         <?php echo $post['title'] ?>
                     </a>
                     </td>

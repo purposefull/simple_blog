@@ -1,8 +1,5 @@
 <?php $title = $post['title'] ?>
 
-<?php ob_start() ?>
-
-<!DOCTYPE html>
 <html>
 
 <h1><?= $post['title'] ?></h1>
@@ -11,6 +8,4 @@
 
 </html>
 
-<?php $content = ob_get_clean() ?>
-
-<?php include 'layout.php' ?>
+<?php require_once 'layout.php' ?>
