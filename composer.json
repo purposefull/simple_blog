@@ -1,8 +1,5 @@
 {
-  "require": {
-    "symfony/symfony": "3.0.*"
-  },
-  "autoload": {
-    "files": ["model.php","controllers.php"]
-  }
+    "require": {
+        "symfony/routing": "^3.1"
+    }
 }
