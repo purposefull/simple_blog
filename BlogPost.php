@@ -1,5 +1,8 @@
 <?php
-class Post
+
+require_once 'Model.php';
+
+class BlogPost
 {
     protected $id;
 
@@ -73,11 +76,39 @@ class Post
         $this->created_at = $created_at;
     }
 
+    public function save()
+    {
+            $Model = new Model();
 
+            $PDO = $Model->open_database_connection();
+
+            $query = 'INSERT INTO post (title, body, created_at) VALUES (:title, :body, :created_at)';
+            $statement = $PDO->prepare($query);
+            $statement->bindValue(':title', $this->title, PDO::PARAM_STR);
+            $statement->bindValue(':body', $this->body, PDO::PARAM_STR);
+            $statement->bindValue(':created_at', $this->created_at, PDO::PARAM_STR);
+            $statement->execute();
+
+            return $PDO->lastInsertId();
+
+    }
+
+    public function delete()
+    {
+        $Model = new Model();
+
+        $link = $Model->open_database_connection();
+
+        $query = "DELETE FROM post WHERE `id`=:id";
+        $statement = $link->prepare($query);
+        $statement->bindValue(':id', $id, PDO::PARAM_STR);
+        $statement->execute();
+    }
+
+    public function findById()
+    {
+
+    }
 }
 
 
-
-
-
-$post1 = new Post;

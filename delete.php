@@ -1,20 +1,15 @@
 <?php
 
+require_once 'Model.php';
+
+$Model = new Model();
 
 $id = $_REQUEST['id'];
 
-require_once 'model.php';
+$BlogPost = new BlogPost();
 
-$link = open_database_connection();
+$BlogPost->findById($id);
 
-$query = "DELETE FROM post WHERE `id`=:id";
-$statement = $link->prepare($query);
-$statement->bindValue (':id', $id, PDO::PARAM_STR);
-$statement->execute();
+$BlogPost->delete();
 
 echo 'запись c id = ' . $id . ' была успешно удалена';
-
-$id = $_REQUEST['id']
-
-("DELETE FROM `post` WHERE `id`=\"$id\"");
-

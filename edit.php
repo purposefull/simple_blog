@@ -1,12 +1,15 @@
 <?php
 
-require_once 'model.php';
+require_once 'Model.php';
 
-$data = get_post_by_id($_GET['id']);
+$Model = new Model();
+
+
+$data = $Model->get_post_by_id($_GET['id']);
 
 if ($_POST['id']) {
 
-    $link = open_database_connection();
+    $link = $Model->open_database_connection();
 
     $query = 'UPDATE post SET title = :title, body = :body, created_at = :created_at  WHERE id=:id';
     $statement = $link->prepare($query);
@@ -16,7 +19,7 @@ if ($_POST['id']) {
     $statement->bindValue (':created_at', $_POST ['created_at'], PDO::PARAM_STR);
     $statement->execute();
 
-    $data = get_post_by_id($_POST['id']);
+    $data = $Model->get_post_by_id($_POST['id']);
 
 
    //$link->exec('UPDATE post SET  body = '.$_POST["body"].' WHERE id='.);
