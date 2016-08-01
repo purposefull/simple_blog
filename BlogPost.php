@@ -93,7 +93,29 @@ class BlogPost
 
     }
 
-    public function delete()
+    public function findById($id)
+    {
+
+        $Model = new Model();
+
+        $link = $Model->open_database_connection();
+
+        $query = 'SELECT id, FROM post WHERE  id=:id';
+        $statement = $link->prepare($query);
+        $statement->bindValue(':id', $id, PDO::PARAM_INT);
+        $statement->execute();
+
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+        $Model->close_database_connection($link);
+
+        return $row;
+
+
+
+    }
+
+    public function delete($id)
     {
         $Model = new Model();
 
@@ -105,10 +127,7 @@ class BlogPost
         $statement->execute();
     }
 
-    public function findById()
-    {
 
-    }
 }
 
 

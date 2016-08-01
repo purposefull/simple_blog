@@ -2,8 +2,8 @@
 
 require_once 'Model.php';
 
+$Model = new Model();
 
-
-$post = get_post_by_id($_GET['id']);
+$post = $Model->get_post_by_id($_GET['id']);
 
 require 'templates/show.php';
