@@ -2,10 +2,13 @@
 
 require_once 'Model.php';
 
+require_once 'BlogPost.php';
+
 $Model = new Model();
 
+$BlogPost = new BlogPost();
 
-$data = $Model->get_post_by_id($_GET['id']);
+$data = $BlogPost->findById($_GET['id']);
 
 if ($_POST['id']) {
 

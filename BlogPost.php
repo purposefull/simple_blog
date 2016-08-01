@@ -100,16 +100,20 @@ class BlogPost
 
         $link = $Model->open_database_connection();
 
-        $query = 'SELECT id, FROM post WHERE  id=:id';
+        $query = 'SELECT * FROM post WHERE  id=:id';
         $statement = $link->prepare($query);
         $statement->bindValue(':id', $id, PDO::PARAM_INT);
         $statement->execute();
 
         $row = $statement->fetch(PDO::FETCH_ASSOC);
 
+        $this->setTitle($row['title']);
+        $this->setBody($row['body']);
+        $this->setCreatedAt($row['created_at']);
+
         $Model->close_database_connection($link);
 
-        return $row;
+        return $this;
 
 
 
