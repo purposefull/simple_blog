@@ -1,10 +1,10 @@
 <?php
 
-class Model
+class Mapper
 {
  public function open_database_connection()
  {
-     $link = new PDO("mysql:host=localhost;dbname=blog_db", 'root', '9112oleg');
+     $link = new PDO("mysql:host=localhost;dbname=blog_db", 'root', 'root');
 
      return $link;
  }

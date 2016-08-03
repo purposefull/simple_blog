@@ -1,33 +1,24 @@
 <?php
 
-require_once 'Model.php';
-
 require_once 'BlogPost.php';
 
-$Model = new Model();
+$BlogPost = BlogPost::findById($_GET['id']);
 
-$BlogPost = new BlogPost();
-
-$data = $BlogPost->findById($_GET['id']);
-
+// if form is submit
 if ($_POST['id']) {
 
-    $link = $Model->open_database_connection();
+    // update
+    $BlogPost = BlogPost::findById($_POST['id']);
 
-    $query = 'UPDATE post SET title = :title, body = :body, created_at = :created_at  WHERE id=:id';
-    $statement = $link->prepare($query);
-    $statement->bindValue (':id', $_POST ['id'], PDO::PARAM_STR);
-    $statement->bindValue (':title', $_POST ['title'], PDO::PARAM_STR);
-    $statement->bindValue (':body', $_POST ['body'], PDO::PARAM_STR);
-    $statement->bindValue (':created_at', $_POST ['created_at'], PDO::PARAM_STR);
-    $statement->execute();
+    $BlogPost->setTitle($_POST['title']);
+    $BlogPost->setBody($_POST['body']);
+    $BlogPost->setCreatedAt($_POST['created_at']);
+    $BlogPost->save();
 
-    $data = $Model->get_post_by_id($_POST['id']);
-
-
-   //$link->exec('UPDATE post SET  body = '.$_POST["body"].' WHERE id='.);
-
+    // fetch
+    $BlogPost = BlogPost::findById($_POST['id']);
 }
+
 
 
 require_once 'templates/edit.php';

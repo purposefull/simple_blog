@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Model.php';
+require_once 'Mapper.php';
 
 class BlogPost
 {
@@ -76,27 +76,46 @@ class BlogPost
         $this->created_at = $created_at;
     }
 
+    /**
+     * Update and Insert Queries
+     *
+     * @return string
+     */
     public function save()
     {
-            $Model = new Model();
+        $Model = new Mapper();
+        $PDO = $Model->open_database_connection();
 
-            $PDO = $Model->open_database_connection();
-
+        if ($this->getId()) {
+            // update existing object
+            $query = 'UPDATE post SET title = :title, body = :body, created_at = :created_at  WHERE id=:id';
+            $statement = $PDO->prepare($query);
+            $statement->bindValue (':id', $this->id, PDO::PARAM_STR);
+            $statement->bindValue (':title', $this->title, PDO::PARAM_STR);
+            $statement->bindValue (':body', $this->body, PDO::PARAM_STR);
+            $statement->bindValue (':created_at', $this->created_at, PDO::PARAM_STR);
+            $statement->execute();
+        } else {
+            // new object insert
             $query = 'INSERT INTO post (title, body, created_at) VALUES (:title, :body, :created_at)';
             $statement = $PDO->prepare($query);
             $statement->bindValue(':title', $this->title, PDO::PARAM_STR);
             $statement->bindValue(':body', $this->body, PDO::PARAM_STR);
             $statement->bindValue(':created_at', $this->created_at, PDO::PARAM_STR);
             $statement->execute();
+        }
 
-            return $PDO->lastInsertId();
+        return $PDO->lastInsertId();
 
     }
 
-    public function findById($id)
+    /**
+     * @param $id
+     * @return BlogPost
+     */
+    public static function findById($id)
     {
-
-        $Model = new Model();
+        $Model = new Mapper();
 
         $link = $Model->open_database_connection();
 
@@ -107,21 +126,20 @@ class BlogPost
 
         $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-        $this->setTitle($row['title']);
-        $this->setBody($row['body']);
-        $this->setCreatedAt($row['created_at']);
+        $BlogPost = new self;
+        $BlogPost->setId($row['id']);
+        $BlogPost->setTitle($row['title']);
+        $BlogPost->setBody($row['body']);
+        $BlogPost->setCreatedAt($row['created_at']);
 
         $Model->close_database_connection($link);
 
-        return $this;
-
-
-
+        return $BlogPost;
     }
 
     public function delete($id)
     {
-        $Model = new Model();
+        $Model = new Mapper();
 
         $link = $Model->open_database_connection();
 
@@ -130,7 +148,6 @@ class BlogPost
         $statement->bindValue(':id', $id, PDO::PARAM_STR);
         $statement->execute();
     }
-
 
 }
 

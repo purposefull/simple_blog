@@ -1,8 +1,8 @@
 <?php
 // model.php
-require_once 'Model.php';
+require_once 'Mapper.php';
 
-$Model = new Model ();
+$Model = new Mapper ();
 
 $posts = $Model->get_all_posts();
     
