@@ -18,9 +18,10 @@ class Mapper
     {
         $link = $this->open_database_connection();
 
-        $result = $link->query('SELECT id, title FROM post');
+        $result = $link->query('SELECT * FROM user');
 
         $posts = array();
+
 
         while ($row = $result->fetch(\PDO::FETCH_ASSOC)) {
             $posts[] = $row;

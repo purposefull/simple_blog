@@ -6,11 +6,11 @@ class BlogPost
 {
     protected $id;
 
-    protected $title;
+    public $title;
 
-    protected $body;
+    public $body;
 
-    protected $created_at;
+    public $created_at;
 
     /**
      * @return mixed
@@ -88,16 +88,16 @@ class BlogPost
 
         if ($this->getId()) {
             // update existing object
-            $query = 'UPDATE post SET title = :title, body = :body, created_at = :created_at  WHERE id=:id';
+            $query = 'UPDATE user SET title = :title, body = :body, created_at = :created_at  WHERE id=:id';
             $statement = $PDO->prepare($query);
-            $statement->bindValue (':id', $this->id, PDO::PARAM_STR);
+            $statement->bindValue (':id', $this->id, PDO::PARAM_INT);
             $statement->bindValue (':title', $this->title, PDO::PARAM_STR);
             $statement->bindValue (':body', $this->body, PDO::PARAM_STR);
             $statement->bindValue (':created_at', $this->created_at, PDO::PARAM_STR);
             $statement->execute();
         } else {
             // new object insert
-            $query = 'INSERT INTO post (title, body, created_at) VALUES (:title, :body, :created_at)';
+            $query = 'INSERT INTO user (title, body, created_at) VALUES (:title, :body, :created_at)';
             $statement = $PDO->prepare($query);
             $statement->bindValue(':title', $this->title, PDO::PARAM_STR);
             $statement->bindValue(':body', $this->body, PDO::PARAM_STR);
@@ -119,7 +119,7 @@ class BlogPost
 
         $link = $Model->open_database_connection();
 
-        $query = 'SELECT * FROM post WHERE  id=:id';
+        $query = 'SELECT * FROM user WHERE  id=:id';
         $statement = $link->prepare($query);
         $statement->bindValue(':id', $id, PDO::PARAM_INT);
         $statement->execute();
@@ -143,10 +143,10 @@ class BlogPost
 
         $link = $Model->open_database_connection();
 
-        $query = "DELETE FROM post WHERE `id`=:id";
+        $query = 'DELETE FROM user WHERE id=:id';
         $statement = $link->prepare($query);
-        $statement->bindValue(':id', $id, PDO::PARAM_STR);
-        $statement->execute();
+        $statement->bindValue(':id', $id, PDO::PARAM_INT);
+        return $statement->execute();
     }
 
 }

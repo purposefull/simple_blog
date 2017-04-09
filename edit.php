@@ -17,6 +17,8 @@ if ($_POST['id']) {
 
     // fetch
     $BlogPost = BlogPost::findById($_POST['id']);
+
+    header('Location: list.php?id='.$id);
 }
 
 

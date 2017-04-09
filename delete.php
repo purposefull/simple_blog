@@ -3,6 +3,9 @@
 require_once 'BlogPost.php';
 
 $BlogPost = BlogPost::findById($_REQUEST['id']);
-$BlogPost->delete($id);
+$BlogPost->delete($_REQUEST['id']);
 
-echo 'запись c id = ' . $id . ' была успешно удалена';
+header('Location: list.php');
+
+
+

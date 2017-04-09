@@ -10,7 +10,7 @@ if ($_POST['title'] & $_POST['body'] & $_POST['created_at']) {
     $BlogPost->setCreatedAt($_POST['created_at']);
     $id = $BlogPost->save();
 
-    header('Location: edit.php?id='.$id);
+    header('Location: list.php');
 }
 
 $date = date('Y-m-d H:i:s', time());

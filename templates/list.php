@@ -5,10 +5,13 @@
        <table class='table'>
            <thead>
            <tr>
-               <th>#</th>
-               <th>title</th>
-               <th>edit</th>
-               <th>delete</th>
+               <th>id</th>
+               <th>Title</th>
+               <td>
+                   <form action="create.php">
+                       <button> Create</button>
+                   </form>
+               </td>
            </tr>
            </thead>
             <?php foreach ($posts as $post): ?>
@@ -24,12 +27,12 @@
                     </td>
                     <td>
                         <a href="/edit.php?id=<?php echo $post['id'] ?>">
-                        edit
+                        Edit
                     </a>
                     </td>
                     <td>
                         <a href="/delete.php?id=<?php echo $post['id'] ?>">
-                        delete
+                        Delete
                     </a>
                     </td>
                 </tr>
