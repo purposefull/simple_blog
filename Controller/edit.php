@@ -23,4 +23,4 @@ if ($_POST['id']) {
 
 
 
-require_once 'templates/edit.php';
+require_once 'View/edit.php';

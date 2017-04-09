@@ -15,4 +15,4 @@ if ($_POST['title'] & $_POST['body'] & $_POST['created_at']) {
 
 $date = date('Y-m-d H:i:s', time());
 
-require_once 'templates/create.php';
+require_once 'View/create.php';

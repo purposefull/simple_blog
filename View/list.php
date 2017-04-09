@@ -21,17 +21,17 @@
 
                     </td>
                     <td>
-                        <a href="/show.php?id=<?php echo $post['id'] ?>">
+                        <a href="/Controller/show.php?id=<?php echo $post['id'] ?>">
                         <?php echo $post['title'] ?>
                     </a>
                     </td>
                     <td>
-                        <a href="/edit.php?id=<?php echo $post['id'] ?>">
+                        <a href="/Controller/edit.php?id=<?php echo $post['id'] ?>">
                         Edit
                     </a>
                     </td>
                     <td>
-                        <a href="/delete.php?id=<?php echo $post['id'] ?>">
+                        <a href="/Controller/delete.php?id=<?php echo $post['id'] ?>">
                         Delete
                     </a>
                     </td>
@@ -39,4 +39,3 @@
             <?php endforeach ?>
         </table>
     </body>
-</html>
